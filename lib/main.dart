@@ -17,11 +17,20 @@ class _CalculatorState extends State<Calculator> {
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.lightGreenAccent,
           foregroundColor: Colors.white,
           title: Text("Calculator"),
           centerTitle: true,
+        ),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 5),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+          //   Calculator display
+          ],),
         ),
       ),
     );
