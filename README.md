@@ -1,6 +1,12 @@
-# Portfolio Mobile App
+# Calculator App
 
+This is a simple calculator application that calculates the sample options for a given point and parameter values using the provided parameters and returns the results.
 A new Flutter project.
+
+# Technologies Used in the Calculator
+
+- dart
+- flutter
 
 ## Getting Started
 
