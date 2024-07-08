@@ -11,31 +11,41 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  Widget calcbutton(String btntxt, Color txtcolor){
-    return Container(
-      child: ElevatedButton(
-        onPressed: (){},
-        child: Text(btntxt,style: TextStyle(
-          fontSize: 35,color: txtcolor,
-        ),
-        ),
-      ),
-    );
-  }
+
+
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth=MediaQuery.of(context).size.width;
+    double screenHeight=MediaQuery.of(context).size.height;
+    Widget calcbutton(String btntxt, Color txtcolor){
+      return Container(
+        width: screenWidth * 0.24,
+        padding: EdgeInsets.symmetric(vertical: 5),
+        margin: EdgeInsets.symmetric(vertical: 1),
+        decoration: BoxDecoration(
+          // border: Border.all(color: Colors.grey,width: 1,)
+        ),
+        child: InkWell(
+          onTap: (){},
+          child: Text(btntxt,textAlign: TextAlign.center,style: TextStyle(
+            fontSize: 35,color: txtcolor,
+          ),
+          ),
+        ),
+      );
+    }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
         backgroundColor: Colors.white,
-        // appBar: AppBar(
-        //   backgroundColor: Colors.lightGreenAccent,
-        //   foregroundColor: Colors.white,
-        //   title: Text("Calculator"),
-        //   centerTitle: true,
-        // ),
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          foregroundColor: Colors.white,
+          title: Text("Calculator"),
+          centerTitle: true,
+        ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 5),
           child: Column(
