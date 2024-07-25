@@ -14,7 +14,7 @@ class button1 extends StatelessWidget {
       borderRadius: BorderRadius.circular(50),
       child: CircleAvatar(
         radius: 36,
-        child: Text(label,style: TextStyle(fontSize: 25,color: textColor),),
+        child: Text(label,style: TextStyle(fontSize: 35,color: textColor),),
         backgroundColor:AppColors.secondary2Color,
       ),
     );

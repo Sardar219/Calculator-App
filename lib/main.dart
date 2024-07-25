@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:flutter_first/Widget/button.dart";
 import "package:flutter_first/Widget/custome.dart";
 import "package:flutter_first/color.dart";
+
+import "Widget/data.dart";
 void main(){
   runApp(Calculator());
 }
@@ -48,10 +50,25 @@ class _CalculatorState extends State<Calculator> {
                 decoration:decoration,
                 child: Column(children: [
                   Row(
-                    children: [
-                     button1(),
-                      button1(),
-                  ],)
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(4, (index) => buttonList[index]),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(4, (index) => buttonList[index+4]),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(4, (index) => buttonList[index+8]),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(4, (index) => buttonList[index+12]),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(4, (index) => buttonList[index+16]),
+                  ),
                 ],),
               ),
 
@@ -61,3 +78,4 @@ class _CalculatorState extends State<Calculator> {
     );
   }
 }
+
