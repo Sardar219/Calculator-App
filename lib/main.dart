@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_first/Widget/button.dart";
 import "package:flutter_first/Widget/custome.dart";
 import "package:flutter_first/color.dart";
 void main(){
@@ -45,7 +46,15 @@ class _CalculatorState extends State<Calculator> {
                 width: double.infinity,
                 padding: padding,
                 decoration:decoration,
+                child: Column(children: [
+                  Row(
+                    children: [
+                     button1(),
+                      button1(),
+                  ],)
+                ],),
               ),
+
           ],),
         ),
       ),
