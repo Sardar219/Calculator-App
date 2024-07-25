@@ -36,12 +36,13 @@ class _CalculatorState extends State<Calculator> {
       );
     }
     return MaterialApp(
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.black,
           foregroundColor: Colors.white,
           title: Text("Calculator"),
           centerTitle: true,
@@ -49,8 +50,14 @@ class _CalculatorState extends State<Calculator> {
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 5),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              Padding(padding: EdgeInsets.symmetric(horizontal: 25,vertical: 30),
+              child: TextField(
+                style: TextStyle(fontSize: 50),
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),),
           //   Calculator display
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
