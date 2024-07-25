@@ -1,8 +1,10 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter_first/Widget/button.dart";
 import "package:flutter_first/Widget/custome.dart";
 import "package:flutter_first/color.dart";
 
+import "Widget/calculat.dart";
 import "Widget/data.dart";
 void main(){
   runApp(Calculator());
@@ -48,7 +50,9 @@ class _CalculatorState extends State<Calculator> {
                 width: double.infinity,
                 padding: padding,
                 decoration:decoration,
-                child: Column(children: [
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: List.generate(4, (index) => buttonList[index]),
@@ -62,13 +66,24 @@ class _CalculatorState extends State<Calculator> {
                     children: List.generate(4, (index) => buttonList[index+8]),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: List.generate(4, (index) => buttonList[index+12]),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: List.generate(4, (index) => buttonList[index+16]),
-                  ),
+                    children: [
+                      Expanded(
+                        child: Column(children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: List.generate(3, (index) => buttonList[index+12]),
+                          ),
+                          SizedBox(height: 20,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: List.generate(3 , (index) => buttonList[index+15]),
+                          ),
+                        ],),
+                      ),
+                      SizedBox(width: 20,),
+                      calculat()
+                    ],
+                  )
                 ],),
               ),
 

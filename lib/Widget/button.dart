@@ -8,14 +8,19 @@ class button1 extends StatelessWidget {
   final Color textColor;
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation:3,
-      color: AppColors.primaryColor,
-      borderRadius: BorderRadius.circular(50),
-      child: CircleAvatar(
-        radius: 36,
-        child: Text(label,style: TextStyle(fontSize: 35,color: textColor),),
-        backgroundColor:AppColors.secondary2Color,
+    return InkWell(
+      onTap: () {
+        // TODO: on Tap
+      },
+      child: Material(
+        elevation:3,
+        color: AppColors.primaryColor,
+        borderRadius: BorderRadius.circular(50),
+        child: CircleAvatar(
+          radius: 36,
+          child: Text(label,style: TextStyle(fontSize: 35,color: textColor),),
+          backgroundColor:AppColors.secondary2Color,
+        ),
       ),
     );
   }

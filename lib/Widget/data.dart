@@ -19,9 +19,7 @@ List<Widget> buttonList=[
   button1(label: "1",),
   button1(label: "2",),
   button1(label: "3",),
-  button1(label: "",textColor: AppColors.secondaryColor,),
   button1(label: "%",),
   button1(label: "0",),
   button1(label: ".",),
-  button1(label: "=",textColor: AppColors.secondaryColor,),
 ];
