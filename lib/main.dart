@@ -17,7 +17,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "googlesans"),
+      theme: ThemeData(
+          fontFamily: "googlesans",
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue)),
       home: MainPage(),
     );
   }
